@@ -7,7 +7,7 @@ app.use(express.json())
 // 以下部分处理各种http请求
 app.get('/', (req, res) => {
     const { openid } = req.query // 通过get参数形式指定openid
-    console.log("Request Content:", req)
+    console.log("Request Content:", req.query)
     res.send('欢迎使用微信云托管！')
 })
 
