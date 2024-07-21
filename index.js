@@ -17,19 +17,16 @@ app.get('/send', (req, res) => {
 })
 
 app.post('/signup', async (req, res) => {
-    const {openid} = req.query // 通过get参数形式指定openid
-    console.log("Got a POST request from /signup path!")
-
     const data = req.body
-    // let title = req.body.title
-    console.log("Corresponding title:", data)
+    console.log("Got a POST request from /signup path!", data)
 
-    const info = await newsletter.signupNotify(openid,
-        "活动标题",
-        "address",
-        "报名人",
-        "￥1",
-        "活动备注")
+    const info = await newsletter.signupNotify(
+        data.openid,
+        data.title,
+        data.address,
+        data.name,
+        data.amount,
+        data.memo)
     res.send(info)
 })
 

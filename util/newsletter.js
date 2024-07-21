@@ -2,7 +2,7 @@ const request = require("request");
 
 // 发送用户报名成功时候的通知订阅消息
 module.exports.signupNotify = async function signupSuccessNotify(_openid, _title, _address, _name, _amount, _memo) {
-    // return _title
+    console.log("Processing...")
     return new Promise((resolve, reject) => {
         request({
             url: "http://api.weixin.qq.com/cgi-bin/message/subscribe/send",
@@ -10,7 +10,6 @@ module.exports.signupNotify = async function signupSuccessNotify(_openid, _title
             body: JSON.stringify({
                 touser: _openid,
                 template_id: "nJRikwbUcAe12oBPt5fJoxHmRKDZu6_WxCT2uUSF9rs",
-                miniprogram_state: "developer",
                 data: {
                     // 这里替换成自己的模板ID的详细事项，不要擅自添加或更改
                     // 按照key前面的类型，对照参数限制填写，否则都会发送不成功
