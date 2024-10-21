@@ -42,7 +42,7 @@ app.post('/userSignUp', async (req, res) => {
 })
 
 // 以下部分监听接口
-const port = process.env.PORT || 3333
+const port = process.env.PORT || 80
 app.listen(port, () => {
     console.log('服务启动成功，端口：', port)
 })
