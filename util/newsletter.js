@@ -124,7 +124,7 @@ module.exports.userSignUpNotify = async function userSignUpNotify(_openid, _titl
             url: "http://api.weixin.qq.com/cgi-bin/message/subscribe/send",
             method: "POST",
             body: JSON.stringify({
-                touser: openid,
+                touser: _openid,
                 template_id: "9yw7EnH6QiGJ1KGp7mrplU8T6QG__ErA7CUciFAbeiA",
                 miniprogram_state: "developer",
                 data: {
