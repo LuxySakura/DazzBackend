@@ -11,11 +11,7 @@ app.get('/', (req, res) => {
     res.send('欢迎使用微信云托管！')
 })
 
-app.get('/send', (req, res) => {
-    const { openid } = req.query // 通过get参数形式指定openid
-
-})
-
+// 用户报名后进行“报名成功”订阅消息的发送
 app.post('/signup', async (req, res) => {
     const data = req.body
     console.log("Got a POST request from /signup path!", data)
@@ -30,25 +26,23 @@ app.post('/signup', async (req, res) => {
     res.send(info)
 })
 
-app.post('/testpost', async (req, res) => {
-    const {openid} = req.query // 通过get参数形式指定openid
-    console.log("Got a POST request from /signup path!")
-
-    const data = req.body.title + openid
-    let title = req.body.title
-    console.log("Corresponding title:", data)
-
-    // const info = await newsletter.signupNotify("openid",
-    //     "活动标题",
-    //     "address",
-    //     "报名人",
-    //     "￥1",
-    //     "活动备注")
-    res.send(data)
+app.post('/userSignUp', async (req, res) => {
+    const data = req.body
+    console.log("Got a POST request from /userSignUp path!", data)
+    const info = await newsletter.userSignUpNotify(
+        data.openid,
+        data.title,
+        data.session,
+        data.name,
+        data.phone,
+        data.num,
+        data.price
+    )
+    res.send(info)
 })
 
 // 以下部分监听接口
-const port = process.env.PORT || 80
+const port = process.env.PORT || 3333
 app.listen(port, () => {
     console.log('服务启动成功，端口：', port)
 })
