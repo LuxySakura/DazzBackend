@@ -1,0 +1,70 @@
+{
+  "type": "3",
+  "_id": "yinyuejudonglingying",
+  "_openid": "ousgt5QPhbkd6XiSVFloxUG3ZVWw",
+  "customServiceQR": "cloud://dazz001-9g28efc668fd059c.6461-dazz001-9g28efc668fd059c-1318487994/customServiceQR/客服二维码.png",
+  "posterURLs": [
+    "cloud://dazz001-9g28efc668fd059c.6461-dazz001-9g28efc668fd059c-1318487994/eventsPoster/首页海报.jpg"
+  ],
+  "title": "热力音乐剧冬令营",
+  "location": {
+    "region": ["北京","北京","全部"],
+    "address": "中国国家话剧院排练厅"
+  },
+  "startDate": "26年1月24日",
+  "endDate": "1月30日",
+  "desc": [
+  ],
+  "eventDesc": "cloud://dazz001-9g28efc668fd059c.6461-dazz001-9g28efc668fd059c-1318487994/eventsDesc/冬令营长图.png",
+  "eventTip": [
+  ],
+  "recDesc": "一线艺术家资深专业音乐剧训练",
+  "sessions": [
+    {
+      "session": "《彼得与狼》1.24-30",
+      "prices": [
+        {
+          "price": 0.0,
+          "priceDesc": "10800元",
+          "originPrice": 10800,
+          "maxNum": 5,
+          "minNum": 1,
+          "stock": 20
+        }
+      ]
+    }
+  ],
+  "regist": [],
+  "fixedExtraInfo": [
+    {
+      "title": "微信号",
+      "type": 0
+    },
+    {
+      "title": "姓名",
+      "type": 0
+    },
+    {
+      "title": "年龄",
+      "type": 0
+    },
+    {
+      "title": "性别",
+      "type": 1,
+      "sectionIndex": 0,
+      "sections": [
+        "男",
+        "女"
+      ]
+    },
+    {
+      "title": "衣服尺码",
+      "type": 0
+    }
+  ],
+  "extraTip": "",
+  "postRate": 50,
+  "discountPolicy": [
+
+  ]
+}
